@@ -1,0 +1,40 @@
+body{
+    background-image: url("../images/farm.jpg");
+    background-attachment: fixed;
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1{
+    font-family: 'Nosifer', cursive;
+    font-size: 96px;
+    border: 2px solid black;
+    color: red;
+    border-radius: 10px;
+}
+
+input, button{
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.fence-panel, .fence-posts{
+    height: 75px;
+    padding-top: 20px;
+    position: relative;
+    bottom: 0.65rem;
+}
+
+.fence-container{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    margin-top: 70px;
+    background-color: darkcyan;
+    border: 2px solid black;
+    border-radius: 10px;
+    justify-content: center;
+}
