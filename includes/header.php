@@ -6,6 +6,10 @@
     require 'extraposts.php';
     require 'howManyPanels.php';
     require 'displayFenceMaterials.php';
+    require 'emptyInputs.php';
+    require 'gotPostsAndPanels.php';
+    require 'gotPosts.php'; 
+    require 'gotPanels.php'; 
 ?>
 
 <!DOCTYPE html>

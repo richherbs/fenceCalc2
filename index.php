@@ -16,20 +16,21 @@
     <h2>Your Fence:</h2>
     <div class='fence-container'>
         <?php 
+    
             if(isset($_POST['go'])){
-                if(empty($_POST['length']) && empty($_POST['panels']) && empty($_POST['posts'])){
+                if(emptyInputs()){
                     echo "If you don't make your mind up you'll get nothing";
-                } elseif (!empty($_POST['panels']) && !empty($_POST['posts'])){ 
+                } elseif (gotPostsAndPanels()){ 
                     $panels = (float) $_POST['panels'];
                     $posts = (float) $_POST['posts'];
                     $fenceLength = howLong($panels);
                     $extraPosts = extraPosts($panels, $posts);
                     echo displayFenceMaterials($fenceLength, $extraPosts);
-                } elseif (!empty($_POST['panels'])){
+                } elseif (gotPanels()){
                     $panels = (int) $_POST['panels'];
                     $fenceLength = howLong($panels);
                     echo displayFenceMaterials($fenceLength);
-                } elseif (!empty($_POST['posts'])){
+                } elseif (gotPosts()){
                     $posts = (int) $_POST['posts'];
                     $panels = $posts - 1;
                     $fenceLength = howLong($panels);
